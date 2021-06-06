@@ -1,4 +1,3 @@
-import os
 from flask import Flask,render_template,request
 from werkzeug.utils import secure_filename
 import colorgram 
@@ -22,7 +21,6 @@ def Home():
         if img_file_name != "":
             img_file.save(secure_filename(img_file_name))
             colors=extract_colors(fileName=img_file_name)
-            os.remove(img_file_name)
             return render_template("index.html",photo=True,colors=colors)            
     return render_template("index.html")
 

@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap");
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	box-sizing: border-box;
+}
+
+body {
+	line-height: 1.6;
+	font-size: 1rem;
+	font-weight: 100;
+	background-color: #000;
+	padding: 3rem 7rem;
+	text-align: center;
+	font-family: "Quicksand", sans-serif;
+}
+
+#heading {
+	font-size: 4rem;
+	letter-spacing: 5px;
+	margin: 1rem;
+	background-image: linear-gradient(90deg, #fff600 22%, #ff005c, #0e49b5);
+	color: transparent;
+	background-clip: text;
+	-webkit-background-clip: text;
+}
+
+.warning {
+	margin: 0.5rem;
+	color: yellow;
+}
+
+.form {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0.5rem;
+	margin: 1rem;
+}
+
+.form > * {
+	margin: 0.5rem;
+	display: block;
+	cursor: pointer;
+	outline: none;
+	border: none;
+}
+
+.form__input::-webkit-file-upload-button {
+	padding: 0.5rem 1.5rem;
+	font-size: 1.2rem;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+	background: #54e346;
+	outline: none;
+	border: none;
+	cursor: pointer;
+}
+
+.form__cta {
+	padding: 0.5rem 1.5rem;
+	background: #fdb827;
+	font-size: 1.2rem;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+}
+
+.color__palette__container {
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+	padding: 0.5rem;
+	margin: 0.5rem;
+}
+
+.color__palette {
+	margin: 0.5rem;
+	width: 24vw;
+	height: 24vh;
+	transition: all 0.3s;
+	cursor: pointer;
+	position: relative;
+}
+
+.color__palette:hover {
+	transform: scale(1.08);
+	transition: all 0.2s;
+}
+
+.color__palette__tag {
+	position: absolute;
+	right: 1.2%;
+	bottom: 1%;
+	margin: 0.5rem;
+	font-size: 1.2rem;
+	font-family: "Courier New", Courier, monospace;
+	font-weight: bold;
+	color: white;
+}
+
+.fa-clone {
+	display: none;
+}
+
+.color__palette__tag:hover .fa-clone {
+	display: inline;
+}
+
+@media only screen and (max-width: 600px) {
+	body {
+		padding: 1rem;
+	}
+
+	#heading {
+		font-size: 2rem;
+	}
+
+	.color__palette {
+		width: 100vw;
+	}
+
+	.form {
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.form__input::-webkit-file-upload-button {
+		padding: 0.2rem 1rem;
+		font-size: 1rem;
+	}
+	.form .form__cta {
+		padding: 0.2rem 1rem;
+		font-size: 1rem;
+	}
+}
